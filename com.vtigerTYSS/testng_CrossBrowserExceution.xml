@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite  parallel="tests" name="Suite">
+<listeners>
+<listener class-name="com.vtiger.genericLib.MyListners"></listener>
+</listeners>
+  <test  parallel="tests" name="chromeBrowser">
+  <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.vtiger.contacts.CreateNewContactsTest"/>
+      <class name="com.crm.vtiger.organization.CreateNewOrganizationTest"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  <listeners>
+<listener class-name="com.vtiger.genericLib.MyListners"></listener>
+</listeners>
+  <test  parallel="tests" name="firefoxBrowser">
+  <parameter name="Browser" value="firefox"/>
+    <classes>
+      
+      <class name="com.crm.vtiger.contacts.CreateNewContactWithLeadTypeTest"/>
+      <class name="com.crm.vtiger.contacts.CreateNewContactWithOrganizationNameTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Suite -->
